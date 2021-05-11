@@ -24,12 +24,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 			loadSomeData: () => {
 				fetch("https://www.swapi.tech/api/people/")
 					.then(resp => resp.json())
-					.then(data => setStore({ personajes: data.bar }))
+					.then(data => setStore({ personajes: data.results }))
 					.catch(error => console.log(error));
 
 				fetch("https://www.swapi.tech/api/planets/")
 					.then(resp => resp.json())
-					.then(data => setStore({ planetas: data.bar }))
+					.then(data => setStore({ planetas: data.results }))
 					.catch(error => console.log(error));
 			},
 			changeColor: (index, color) => {
