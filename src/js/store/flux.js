@@ -14,13 +14,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			],
 			personajes: [],
-			planetas: []
+			planetas: [],
+			favoritos: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
-			},
+			/* exampleFunction: () => {
+                getActions().changeColor(0, "green");
+            }, */
 			loadSomeData: () => {
 				fetch("https://www.swapi.tech/api/people/")
 					.then(resp => resp.json())
@@ -32,6 +33,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(data => setStore({ planetas: data.results }))
 					.catch(error => console.log(error));
 			},
+
+			addFavorite: (index, name, type) => {
+				const store = getStore();
+				const filter = store.favoritos.filter(item => item.name === name && item.type === type);
+				if (filter.length === 0) {
+					let newFavorite = {
+						uid: index,
+						name: name,
+						type: type
+					};
+					const newFavoriteItemList = [...store.favoritos, newFavorite];
+					setStore({ favoritos: newFavoriteItemList });
+				}
+			},
+
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();

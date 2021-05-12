@@ -1,12 +1,18 @@
 /* 
     General Styles
 */
-
 #nav{
-    /* background-image: url("../img/fondos-star-wars.png"); */
     background: linear-gradient(to bottom, darkblue, #020429, black,);
 }
-
 #like{
     margin-left: 80px;
+}
+
+#cards{
+    background: transparent;
+}
+
+#btnGroupDrop1{
+    background: linear-gradient(to bottom, darkblue, #020429, black,);
+    border-color: white;
 }

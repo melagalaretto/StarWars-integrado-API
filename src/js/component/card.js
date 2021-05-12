@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
+import { Context } from "../store/appContext";
 
 export const Card = props => {
+	const { store, actions } = useContext(Context);
 	const styles = {
 		maxwidth: "18rem"
 	};
 
 	return (
-		<div className="col-lg-3 col-md-12 mx-auto">
+		<div className="col-lg-3 col-md-12 mx-auto" id="cards">
 			<div className="card card-block" style={styles}>
 				<div className="card-header">
 					<img src={props.imageUrl} className="card-img-top img-fluid" alt="Imagen" />
@@ -16,12 +18,16 @@ export const Card = props => {
 					<h5 className="card-title">{props.name}</h5>
 					<p className="card-text">{props.description}</p>
 				</div>
-				<div className="card-footer">
+				<div className="card-footer" id="footer">
 					<a href={props.buttonUrl} className="btn btn-primary">
 						Leer más
 						{props.buttonLabel}
 					</a>
-					<a href="#" className="btn btn-primary" id="like">
+					<a
+						href="#"
+						className="btn btn-primary"
+						id="like"
+						onClick={() => actions.addFavorite(props.key, props.name, "C")}>
 						<i className="far fa-heart" id="heart" />
 					</a>
 				</div>
@@ -36,5 +42,6 @@ Card.propTypes = {
 	imageUrl: PropTypes.string,
 	buttonLabel: PropTypes.string,
 	buttonUrl: PropTypes.string,
-	buttonLike: PropTypes.string
+	buttonLike: PropTypes.string,
+	key: PropTypes.number
 };
