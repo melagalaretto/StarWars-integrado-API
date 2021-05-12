@@ -48,6 +48,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 
+			deleteFavorite: name => {
+				const store = getStore();
+				const filter = store.favoritos.filter(item => item.name !== name);
+				setStore({ favoritos: filter });
+			},
+
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();

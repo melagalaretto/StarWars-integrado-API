@@ -30,6 +30,11 @@ export const Navbar = () => {
 										<span className="dropdown-item">
 											<Link to={"/PersonajesDetails/" + index}>{item.name}</Link>
 										</span>
+										<span
+											className="dropdown-item"
+											onClick={() => actions.deleteFavorite(item.name)}>
+											<i className="fa fa-trash float-right" />
+										</span>
 									</li>
 								);
 							})}
