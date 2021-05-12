@@ -2,17 +2,34 @@
     General Styles
 */
 #nav{
-    background: linear-gradient(to bottom, darkblue, #020429, black,);
+    background: linear-gradient(to bottom, darkblue, #020429, black);
 }
 #like{
     margin-left: 80px;
+    background: transparent;
+    color: white;
 }
 
+#btnLeer{
+    background: transparent;
+    color: white;
+}
 #cards{
     background: transparent;
 }
-
-#btnGroupDrop1{
+#btnFav{
     background: linear-gradient(to bottom, darkblue, #020429, black,);
     border-color: white;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+#card{
+    background: linear-gradient(to bottom, darkblue, #020429, black);
+}
+
+#bodyCard{
+    color: white;
 }

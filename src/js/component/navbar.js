@@ -16,11 +16,12 @@ export const Navbar = () => {
 					<div className="btn-group">
 						<button
 							type="button"
+							id="btnFav"
 							className="btn btn-primary dropdown-toggle"
 							data-toggle="dropdown"
 							aria-haspopup="true"
 							aria-expanded="false">
-							Favorites <span className="badge badge-light">{store.favoritos.length}</span>
+							Favoritos <span className="badge badge-light">{store.favoritos.length}</span>
 						</button>
 						<ul className="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuButton">
 							{store.favoritos.map((item, index) => {
@@ -29,11 +30,6 @@ export const Navbar = () => {
 										<span className="dropdown-item">
 											<Link to={"/PersonajesDetails/" + index}>{item.name}</Link>
 										</span>
-										{/* <span
-                                        className="dropdown-item"
-                                        onClick={() => actions.delToFavorites(item.name)}>
-                                        <i className="fa fa-trash float-right" aria-hidden="true" />
-                                    </span> */}
 									</li>
 								);
 							})}
