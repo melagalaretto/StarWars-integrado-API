@@ -28,7 +28,9 @@ export const Navbar = () => {
 								return (
 									<li key={`${index}`}>
 										<span className="dropdown-item">
-											<Link to={"/PersonajesDetails/" + index}>{item.name}</Link>
+											<Link to={"/personajedetalle/" + actions.findIndexInCharacters(item.name)}>
+												{item.name}
+											</Link>
 										</span>
 										<span
 											className="dropdown-item"

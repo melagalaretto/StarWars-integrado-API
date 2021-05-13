@@ -1,27 +1,12 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			],
 			personajes: [],
 			planetas: [],
-			favoritos: []
+			favoritos: [],
+			details: {}
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			/* exampleFunction: () => {
-                getActions().changeColor(0, "green");
-            }, */
 			loadSomeData: () => {
 				fetch("https://www.swapi.tech/api/people/")
 					.then(resp => resp.json())
@@ -33,7 +18,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(data => setStore({ planetas: data.results }))
 					.catch(error => console.log(error));
 			},
-
+			sDetails: url => {
+				fetch(url)
+					.then(resp => resp.json())
+					.then(data => setStore({ details: data.result.properties }))
+					.catch(error => console.log(error));
+			},
+			findIndexInCharacters: name => {
+				const store = getStore();
+				var result = -1;
+				store.personajes.some((item, i) => {
+					if (item.name === name) {
+						result = i;
+						return true;
+					}
+				});
+				return result;
+			},
 			addFavorite: (index, name, type) => {
 				const store = getStore();
 				const filter = store.favoritos.filter(item => item.name === name && item.type === type);
