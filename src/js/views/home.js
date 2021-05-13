@@ -5,7 +5,7 @@ import { Planetas } from "../component/planetas";
 import { Vehiculos } from "../component/vehiculos";
 export const Home = () => {
 	return (
-		<div className="container">
+		<div className="container" id="home">
 			<Personajes />
 			<Planetas />
 			<Vehiculos />

@@ -4,7 +4,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 			personajes: [],
 			planetas: [],
 			favoritos: [],
-			details: {}
+			details: {},
+			imagenesPersonajes: [
+				{
+					url: "../img/4295e998fb34e7e46f7ab6283f1674251.jpg"
+				}
+			]
 		},
 		actions: {
 			loadSomeData: () => {
@@ -28,6 +33,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const store = getStore();
 				var result = -1;
 				store.personajes.some((item, i) => {
+					if (item.name === name) {
+						result = i;
+						return true;
+					}
+				});
+				store.planetas.some((item, i) => {
 					if (item.name === name) {
 						result = i;
 						return true;

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import ImagenPersonajes from "../../img/star-wars.png";
+
 export const Personajes = () => {
 	const { store, actions } = useContext(Context);
 	const styles = {
@@ -10,7 +11,9 @@ export const Personajes = () => {
 	return (
 		<>
 			<div className="container-fluid py-2">
-				<h2 className="text-danger">Personajes</h2>
+				<h2 className="text-white" id="titulo">
+					Personajes
+				</h2>
 				<div className="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2 overflow-auto">
 					{store.personajes
 						? store.personajes.map((item, index) => (
@@ -25,7 +28,6 @@ export const Personajes = () => {
 										</div>
 										<div className="card-body" id="bodyCard">
 											<h5 className="card-title">{item.name}</h5>
-											<p className="card-text">{"Lorem Ipsum Dolor"}</p>
 										</div>
 										<div className="card-footer" id="footer">
 											<Link

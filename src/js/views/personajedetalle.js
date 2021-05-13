@@ -7,22 +7,24 @@ import ImagenPersonajes from "../../img/star-wars.png";
 export const PersonajeDetalle = () => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
+	const url = useParams();
 	const styles = {
 		maxwidth: "18rem"
 	};
 	useEffect(() => {
 		actions.sDetails(store.personajes[params.uid].url);
 	}, []);
+
 	return (
 		<>
 			<div className="container">
-				<h2 className="text-danger">
+				<h2 className="text-white">
 					<strong>Detalle del Personaje</strong>
 				</h2>
 				<div className="card mb-3" style={styles}>
 					<div className="row g-0">
 						<div className="col-md-4">
-							<img src={ImagenPersonajes} alt="Characters" className="img-fluid" />
+							<img src={store.imagenesPersonajes} alt="Characters" className="img-fluid" />
 						</div>
 						<div className="col-md-8 card">
 							<div className="card-body">
