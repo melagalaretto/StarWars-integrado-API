@@ -40,6 +40,39 @@ const getState = ({ getStore, getActions, setStore }) => {
 					url:
 						"https://spoiler.bolavip.com/__export/1604585512125/sites/bolavip/img/2020/11/05/00-44_crop1604585147413.jpg_1998527180.jpg"
 				}
+			],
+			imagenesPlanetas: [
+				{
+					url: "https://img.unocero.com/2020/01/nasa-descubre-planeta-tatooine.jpg"
+				},
+				{
+					url: "https://i.pinimg.com/originals/1d/c4/ec/1dc4ec9eb78570ccc4d995dc72939fbd.jpg"
+				},
+				{
+					url: "https://i.pinimg.com/originals/b6/c6/f1/b6c6f13855b066d132f5b7ab9cd12224.jpg"
+				},
+				{
+					url: "https://pm1.narvii.com/6592/17fa9c214dad4ac1671fb301286aa9095e3a5dab_hq.jpg"
+				},
+				{
+					url:
+						"https://www.technobuffalo.com/sites/technobuffalo.com/files/styles/large/public/wp/2016/04/dagobah-002.jpg"
+				},
+				{
+					url: "https://i.redd.it/olnyltcj0h931.png"
+				},
+				{
+					url: "https://i.pinimg.com/originals/a4/b0/3d/a4b03dad3f1d22a1e76c742051cc17b4.jpg"
+				},
+				{
+					url: "https://allgamersin.com/wp-content/uploads/2017/06/Theet.jpg"
+				},
+				{
+					url: "https://i.pinimg.com/originals/3f/7e/89/3f7e893efe4cc037c20b1f742a0da2ce.jpg"
+				},
+				{
+					url: "https://pbs.twimg.com/media/D5t_cgCWkAAQLhV.jpg"
+				}
 			]
 		},
 		actions: {

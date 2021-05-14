@@ -7,11 +7,22 @@ import ImagenPersonajes from "../../img/star-wars.png";
 export const PlanetaDetalle = () => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
+	const uid = useParams();
+	var numID;
+	const tranformNum = num => {
+		/* int    convertidor ({num:url = "0"}) */
+		numID = parseFloat(num.uid);
+	};
+
+	/* ejecutamos la funcion */
+	tranformNum(uid);
+
 	const styles = {
 		maxwidth: "18rem"
 	};
 	useEffect(() => {
 		actions.sDetails(store.planetas[params.uid].url);
+		console.log(uid);
 	}, []);
 
 	return (
@@ -23,7 +34,8 @@ export const PlanetaDetalle = () => {
 				<div className="card mb-3" style={styles}>
 					<div className="row g-0">
 						<div className="col-md-4">
-							<img src={ImagenPersonajes} alt="Characters" className="img-fluid" />
+							{/*                           [le pasamos el numero] */}
+							<img src={store.imagenesPlanetas[numID].url} alt="Characters" className="img-fluid" />
 						</div>
 						<div className="col-md-8 card">
 							<div className="card-body">
