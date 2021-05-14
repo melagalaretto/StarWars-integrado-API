@@ -6,14 +6,27 @@ import ImagenPersonajes from "../../img/star-wars.png";
 
 export const PersonajeDetalle = () => {
 	const { store, actions } = useContext(Context);
+	/*          /personaje          */
 	const params = useParams();
-	const url = useParams();
+	/*    {uid: "5"}      /0,1,2,3,4          */
+	const uid = useParams();
+
+	useEffect(() => {
+		actions.sDetails(store.personajes[params.uid].url);
+		console.log(uid);
+	}, []);
+	var numID;
+	const tranformNum = num => {
+		/* int    convertidor ({num:url = "0"}) */
+		numID = parseFloat(num.uid);
+	};
+
+	/* ejecutamos la funcion */
+	tranformNum(uid);
+
 	const styles = {
 		maxwidth: "18rem"
 	};
-	useEffect(() => {
-		actions.sDetails(store.personajes[params.uid].url);
-	}, []);
 
 	return (
 		<>
@@ -24,7 +37,8 @@ export const PersonajeDetalle = () => {
 				<div className="card mb-3" style={styles}>
 					<div className="row g-0">
 						<div className="col-md-4">
-							<img src={store.imagenesPersonajes} alt="Characters" className="img-fluid" />
+							{/*                           [le pasamos el numero] */}
+							<img src={store.imagenesPersonajes[numID].url} alt="Characters" className="img-fluid" />
 						</div>
 						<div className="col-md-8 card">
 							<div className="card-body">

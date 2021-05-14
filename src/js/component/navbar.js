@@ -31,11 +31,10 @@ export const Navbar = () => {
 											<Link to={"/personajedetalle/" + actions.findIndexInCharacters(item.name)}>
 												{item.name}
 											</Link>
-										</span>
-										<span
-											className="dropdown-item"
-											onClick={() => actions.deleteFavorite(item.name)}>
-											<i className="fa fa-trash float-right" />
+											<i
+												onClick={() => actions.deleteFavorite(item.name)}
+												className="fa fa-trash float-right mt-2"
+											/>
 										</span>
 									</li>
 								);

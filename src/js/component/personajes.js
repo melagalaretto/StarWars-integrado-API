@@ -19,11 +19,13 @@ export const Personajes = () => {
 						? store.personajes.map((item, index) => (
 								<div key={`${index}`} className="col-lg-3 col-md-12 mx-auto" id="cards">
 									<div className="card card-block" id="card" style={styles}>
-										<div className="card-header">
+										<div className="card-header p-0">
 											<img
-												src={ImagenPersonajes}
-												className="card-img-top img-fluid"
+												src={store.imagenesPersonajes[index].url}
+												className="card-img-top"
 												alt="Imagen"
+												width="200%"
+												height="250"
 											/>
 										</div>
 										<div className="card-body" id="bodyCard">
