@@ -36,11 +36,11 @@ export const Personajes = () => {
 												to={"/personajedetalle/" + actions.findIndexInCharacters(item.name)}
 												className="btn btn-primary"
 												id="btnLeer">
-												<span>Leer Más...</span>
+												<span>Ver Más...</span>
 											</Link>
 											<button
 												href="#"
-												className="btn btn-primary float-right"
+												className="btn btn-primary float-right d-flex"
 												id="like"
 												onClick={() => actions.addFavorite(item.uid, item.name, "C")}>
 												<i className="far fa-heart" id="heart" />

@@ -2,17 +2,20 @@
     General Styles
 */
 #nav{
-    background: linear-gradient(to bottom, darkblue, #020429, black);
+    /* background: linear-gradient(to bottom, darkblue, #020429, black); */
+    background: linear-gradient(to bottom, darkred, #00089A,#020429);
 }
 #like{
     margin-left: 80px;
     background: transparent;
     color: white;
+    border-color: white;
 }
 
 #btnLeer{
     background: transparent;
     color: white;
+    border-color: white;
 }
 #cards{
     background: transparent;
@@ -27,15 +30,13 @@ a {
 }
 
 #card{
-    background: linear-gradient(to bottom, darkblue, #020429, black);
-}
-
-#bodyCard{
-    color: white;
+    /* background: linear-gradient(to bottom, darkblue, #020429, black); */
+    background: linear-gradient(to bottom, darkblue,darkred,#020429);
 }
 
 body{
-    background-image: url("../img/4295e998fb34e7e46f7ab6283f1674251.jpg")
+    /* background-image: url("../img/4295e998fb34e7e46f7ab6283f1674251.jpg") */
+    background-image: url("../img/Space-red-galaxy-stars_2560x1600.jpg");
 }
 
 #titulo{

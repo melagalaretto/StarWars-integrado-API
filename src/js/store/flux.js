@@ -8,7 +8,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			imagenesPersonajes: [
 				{
 					url:
-						"https://media.contentapi.ea.com/content/dam/star-wars-battlefront-2/images/2019/08/swbf2-refresh-hero-large-heroes-page-luke-skywalker-16x9-xl.jpg.adapt.crop1x1.320w.jpg"
+						"https://www.tonica.la/__export/1616796315187/sites/debate/img/2021/03/26/sebastian-stan-mark-hamill-luke-skywalker-star-wars.jpg_1902800913.jpg"
 				},
 				{
 					url:
