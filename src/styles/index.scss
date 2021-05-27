@@ -1,10 +1,10 @@
 /* 
     General Styles
 */
-#nav{
-    /* background: linear-gradient(to bottom, darkblue, #020429, black); */
+/* #nav{
+    background: linear-gradient(to bottom, grey #020429, black);
     background: linear-gradient(to bottom, darkred, #00089A,#020429);
-}
+} */
 #like{
     margin-left: 80px;
     background: transparent;
@@ -36,7 +36,10 @@ a {
 
 body{
     /* background-image: url("../img/4295e998fb34e7e46f7ab6283f1674251.jpg") */
-    background-image: url("../img/Space-red-galaxy-stars_2560x1600.jpg");
+    /* background-image: url("../img/Space-red-galaxy-stars_2560x1600.jpg"); */
+    /* background: linear-gradient(to bottom, darkblue,darkred,#020429); */
+    background-image: url("https://fondosmil.com/fondo/31136.jpg");
+   /* background-image: url("https://img.wallpapersafari.com/desktop/1920/1080/46/43/8TyDFf.jpg"); */
 }
 
 #titulo{
@@ -46,4 +49,23 @@ body{
 
 #home{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#login{
+    /* background-image: url("https://images2.alphacoders.com/111/1118141.jpg"); */
+    background-size: 100%;
+    height: 600px;
+    margin-top: 10px;
+}
+
+#InputEmail{
+    width: 300px;
+}
+
+#InputPassword{
+    width: 300px;
+}
+
+#form{
+    margin-top: 50px;
 }
