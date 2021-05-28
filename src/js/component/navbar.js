@@ -11,7 +11,8 @@ export const Navbar = () => {
 			<div className="container">
 				<nav className="navbar navbar-light mb-3 mt-3">
 					<Link to="/">
-						<img src={starWarsImg} width="100" />
+						{/* <img src={starWarsImg} width="100" /> */}
+						<img src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG42.png" width="100" />
 					</Link>
 					<div className="btn-group">
 						<button

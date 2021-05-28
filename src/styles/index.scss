@@ -1,28 +1,25 @@
 /* 
     General Styles
 */
-/* #nav{
-    background: linear-gradient(to bottom, grey #020429, black);
-    background: linear-gradient(to bottom, darkred, #00089A,#020429);
-} */
 #like{
-    margin-left: 80px;
     background: transparent;
     color: white;
-    border-color: white;
+    border-color: darkgoldenrod;
 }
 
 #btnLeer{
     background: transparent;
     color: white;
-    border-color: white;
+    border-color: darkgoldenrod;
 }
 #cards{
     background: transparent;
 }
 #btnFav{
-    background: linear-gradient(to bottom, darkblue, #020429, black,);
+    background: linear-gradient(to bottom, grey, black, black);
     border-color: white;
+    color: white;
+    width: 120px;
 }
 
 a {
@@ -30,16 +27,12 @@ a {
 }
 
 #card{
-    /* background: linear-gradient(to bottom, darkblue, #020429, black); */
-    background: linear-gradient(to bottom, darkblue,darkred,#020429);
+    background-image: url("https://image.freepik.com/foto-gratis/fondo-superficie-pared-yeso-negro_49758-129.jpg");
+    color: white;
 }
 
 body{
-    /* background-image: url("../img/4295e998fb34e7e46f7ab6283f1674251.jpg") */
-    /* background-image: url("../img/Space-red-galaxy-stars_2560x1600.jpg"); */
-    /* background: linear-gradient(to bottom, darkblue,darkred,#020429); */
-    background-image: url("https://fondosmil.com/fondo/31136.jpg");
-   /* background-image: url("https://img.wallpapersafari.com/desktop/1920/1080/46/43/8TyDFf.jpg"); */
+   background-image: url("https://cdn.hipwallpaper.com/i/80/63/c7lgbq.png");
 }
 
 #titulo{
@@ -52,7 +45,7 @@ body{
 }
 
 #login{
-    /* background-image: url("https://images2.alphacoders.com/111/1118141.jpg"); */
+    background-image: url("https://wallpapercave.com/wp/6mYMKGh.jpg");
     background-size: 100%;
     height: 600px;
     margin-top: 10px;
@@ -67,5 +60,24 @@ body{
 }
 
 #form{
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.form-label{
+    color: darkgoldenrod;
+}
+
+#btnLogin{
+    background-color: darkgoldenrod;
+    color: black;
+    width: 100px;
+    margin-top: 10px;
+}
+
+#titleLogin{
+    color: darkgoldenrod;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 40px;
+    margin-left: 30px;
 }

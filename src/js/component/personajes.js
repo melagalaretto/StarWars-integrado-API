@@ -40,7 +40,7 @@ export const Personajes = () => {
 											</Link>
 											<button
 												href="#"
-												className="btn btn-primary float-right d-flex"
+												className="btn btn-primary float-right"
 												id="like"
 												onClick={() => actions.addFavorite(item.uid, item.name, "C")}>
 												<i className="far fa-heart" id="heart" />
