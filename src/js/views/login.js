@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../store/appContext";
 
 export const Login = () => {
+	const { store, actions } = useContext(Context);
+	const login = e => {
+		e.preventDefault();
+		console.log("Di click en login");
+		actions.login("pablo@gmail.com", "123");
+	};
+
 	return (
 		<div className="container" id="login">
 			<h1 id="titleLogin">Iniciar Sesión</h1>
-			<form id="form">
+			<form onSubmit={login} id="form">
 				<div className="mb-3">
 					<label htmlFor="exampleInputEmail1" className="form-label">
 						Email

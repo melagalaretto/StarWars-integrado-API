@@ -76,6 +76,31 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
+			login: async (email, password) => {
+				var myHeaders = new Headers();
+				myHeaders.append("Content-Type", "application/json");
+
+				var raw = JSON.stringify({
+					email: email,
+					password: password
+				});
+
+				var requestOptions = {
+					method: "POST",
+					body: raw,
+					redirect: "follow"
+				};
+				/* console.log("URL-->", process.env.BACKEND_URL + "/login");
+
+				const resLogin = await fetch(process.env.BACKEND_URL + "/login", requestOptions);
+				const data = await resLogin.json();
+                console.log("Data Login", data); */
+				fetch("https://3001-coffee-goat-8qaafjlk.ws-us08.gitpod.io/login", requestOptions)
+					.then(response => response.text())
+					.then(result => console.log(result))
+					.catch(error => console.log("error", error));
+			},
+
 			loadSomeData: () => {
 				fetch("https://www.swapi.tech/api/people/")
 					.then(resp => resp.json())
