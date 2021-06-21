@@ -33,11 +33,11 @@ export const PlanetaDetalle = () => {
 				</h2>
 				<div className="card mb-3" style={styles}>
 					<div className="row g-0">
-						<div className="col-md-4">
+						<div className="col-md-6 pr-0">
 							{/*                           [le pasamos el numero] */}
 							<img src={store.imagenesPlanetas[numID].url} alt="Characters" className="img-fluid" />
 						</div>
-						<div className="col-md-8 card">
+						<div className="col-md-6 card">
 							<div className="card-body">
 								<h4 className="card-title">{store.planetas[params.uid].name}</h4>
 								{Object.entries(store.details).map(([key, value], i) => {
