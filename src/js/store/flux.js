@@ -102,6 +102,29 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ usuario: data.user });
 			},
 
+			registro: async (mail, pass) => {
+				var myHeaders = new Headers();
+				myHeaders.append("Content-Type", "application/json");
+
+				var raw = JSON.stringify({
+					email: mail,
+					password: pass
+				});
+
+				var requestOptions = {
+					method: "POST",
+					headers: myHeaders,
+					body: raw,
+					redirect: "follow"
+				};
+				console.log(process.env.BACKEND_URL);
+
+				fetch(process.env.BACKEND_URL + "/user", requestOptions)
+					.then(response => response.text())
+					.then(result => console.log(result))
+					.catch(error => console.log("error", error));
+			},
+
 			loadSomeData: () => {
 				fetch("https://www.swapi.tech/api/people/")
 					.then(resp => resp.json())

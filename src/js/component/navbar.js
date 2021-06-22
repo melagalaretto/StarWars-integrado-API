@@ -46,12 +46,15 @@ export const Navbar = () => {
 									);
 								})}
 							</ul>
+							<button type="submit" className="btn" id="btnLogin">
+								Cerrar sesión
+							</button>
 						</div>
 					) : (
 						<div>
 							<Link to="/login">
-								<button type="submit" className="btn" id="btnLogin">
-									Iniciar
+								<button type="submit" className="btn mr-3" id="btnLogin">
+									Ingresar
 								</button>
 							</Link>
 							<Link to="/registro">
