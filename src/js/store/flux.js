@@ -73,32 +73,33 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{
 					url: "https://pbs.twimg.com/media/D5t_cgCWkAAQLhV.jpg"
 				}
-			]
+			],
+			usuario: null
 		},
 		actions: {
-			login: async (email, password) => {
+			login: async (mail, pass) => {
 				var myHeaders = new Headers();
 				myHeaders.append("Content-Type", "application/json");
 
 				var raw = JSON.stringify({
-					email: email,
-					password: password
+					email: mail,
+					password: pass
 				});
 
 				var requestOptions = {
 					method: "POST",
+					headers: myHeaders,
 					body: raw,
 					redirect: "follow"
 				};
-				/* console.log("URL-->", process.env.BACKEND_URL + "/login");
+				let url = process.env.BACKEND_URL + "/login";
+				console.log(url);
 
-				const resLogin = await fetch(process.env.BACKEND_URL + "/login", requestOptions);
+				const resLogin = await fetch(url, requestOptions);
 				const data = await resLogin.json();
-                console.log("Data Login", data); */
-				fetch("https://3001-coffee-goat-8qaafjlk.ws-us08.gitpod.io/login", requestOptions)
-					.then(response => response.text())
-					.then(result => console.log(result))
-					.catch(error => console.log("error", error));
+				console.log("Data Login", data);
+				sessionStorage.setItem("token", data.token);
+				setStore({ usuario: data.user });
 			},
 
 			loadSomeData: () => {
