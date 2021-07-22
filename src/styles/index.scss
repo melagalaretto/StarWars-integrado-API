@@ -30,7 +30,9 @@ a {
 }
 
 #card{
-    background-image: url("https://image.freepik.com/foto-gratis/fondo-superficie-pared-yeso-negro_49758-129.jpg");
+    background-image: url("https://img.freepik.com/vector-gratis/gris-metalico-superponen-sobre-fondo-gris-espacio-blanco_33869-1024.jpg?size=626&ext=jpg");
+    /* background-size: contain; */
+    background-size: cover;
     color: white;
 }
 
@@ -87,6 +89,11 @@ body{
     color: black;
     width: 100px;
     margin-top: 10px;
+}
+
+#btnCerrar{
+    background-color: darkgoldenrod;
+    color: black;
 }
 
 #titleLogin{

@@ -31,6 +31,7 @@ export const PersonajeDetalle = () => {
 	return (
 		<>
 			<div className="container">
+				<button type="submit" className="btn text-white" />
 				<h2 className="text-white">
 					<strong>Detalle del Personaje</strong>
 				</h2>

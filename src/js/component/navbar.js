@@ -16,43 +16,49 @@ export const Navbar = () => {
 					</Link>
 
 					{store.logeado ? (
-						<div className="btn-group">
-							<button
-								type="button"
-								id="btnFav"
-								className="btn btn-primary dropdown-toggle"
-								data-toggle="dropdown"
-								aria-haspopup="true"
-								aria-expanded="false">
-								Favoritos <span className="badge badge-light">{store.favoritos.length}</span>
-							</button>
-							<ul className="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuButton">
-								{store.favoritos.map((item, index) => {
-									return (
-										<li key={`${index}`}>
-											<span className="dropdown-item">
-												<Link
-													to={
-														"/personajedetalle/" + actions.findIndexInCharacters(item.name)
-													}>
-													{item.name}
-												</Link>
-												<i
-													onClick={() => actions.deleteFavorite(item.name)}
-													className="fa fa-trash float-right mt-2"
-												/>
-											</span>
-										</li>
-									);
-								})}
-							</ul>
-							<button
-								onClick={() => {
-									actions.cerrarSesion();
-								}}
-								className="btn">
-								Cerrar sesión
-							</button>
+						<div>
+							<div className="btn-group mr-3">
+								<button
+									type="button"
+									id="btnFav"
+									className="btn btn-primary dropdown-toggle"
+									data-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false">
+									Favoritos <span className="badge badge-light">{store.favoritos.length}</span>
+								</button>
+								<ul className="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuButton">
+									{store.favoritos.map((item, index) => {
+										return (
+											<li key={`${index}`}>
+												<span className="dropdown-item">
+													<Link
+														to={
+															"/personajedetalle/" +
+															actions.findIndexInCharacters(item.name)
+														}>
+														{item.name}
+													</Link>
+													<i
+														onClick={() => actions.deleteFavorite(item.name)}
+														className="fa fa-trash float-right mt-2"
+													/>
+												</span>
+											</li>
+										);
+									})}
+								</ul>
+							</div>
+							<Link to="/login">
+								<button
+									onClick={() => {
+										actions.cerrarSesion();
+									}}
+									className="btn"
+									id="btnCerrar">
+									Cerrar sesión
+								</button>
+							</Link>
 						</div>
 					) : (
 						<div>

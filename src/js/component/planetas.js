@@ -31,7 +31,6 @@ export const Planetas = () => {
 										</div>
 										<div className="card-body" id="bodyCard">
 											<h5 className="card-title">{item.name}</h5>
-											<p className="card-text">{"Lorem Ipsum Dolor"}</p>
 										</div>
 										<div className="card-footer" id="footer">
 											<Link
