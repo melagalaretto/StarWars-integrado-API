@@ -74,9 +74,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 					url: "https://pbs.twimg.com/media/D5t_cgCWkAAQLhV.jpg"
 				}
 			],
-			usuario: null
+			usuario: null,
+			logeado: false
 		},
 		actions: {
+			cerrarSesion: () => {
+				sessionStorage.removeItem("token");
+				setStore({ logeado: false });
+				setStore({ usuario: "" });
+			},
+
 			login: async (mail, pass) => {
 				var myHeaders = new Headers();
 				myHeaders.append("Content-Type", "application/json");
@@ -99,6 +106,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const data = await resLogin.json();
 				console.log("Data Login", data);
 				sessionStorage.setItem("token", data.token);
+				setStore({ logeado: true });
 				setStore({ usuario: data.user });
 			},
 

@@ -15,7 +15,7 @@ export const Navbar = () => {
 						<img src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG42.png" width="100" />
 					</Link>
 
-					{sessionStorage.getItem("token") ? (
+					{store.logeado ? (
 						<div className="btn-group">
 							<button
 								type="button"
@@ -46,7 +46,11 @@ export const Navbar = () => {
 									);
 								})}
 							</ul>
-							<button type="submit" className="btn" id="btnLogin">
+							<button
+								onClick={() => {
+									actions.cerrarSesion();
+								}}
+								className="btn">
 								Cerrar sesión
 							</button>
 						</div>
